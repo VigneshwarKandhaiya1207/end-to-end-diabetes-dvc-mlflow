@@ -1,0 +1,5 @@
+pandas
+dvc
+pyYaml
+mlflow
+dvc-s3
