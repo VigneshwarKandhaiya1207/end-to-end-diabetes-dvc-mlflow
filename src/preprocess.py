@@ -22,14 +22,9 @@ def load_data(data_path,output_path):
 
 
 if __name__=="__main__":
-    input_path="https://raw.githubusercontent.com/VigneshwarKandhaiya1207/datasets/refs/heads/main/gemstone.csv"
+    input_path="https://raw.githubusercontent.com/VigneshwarKandhaiya1207/datasets/refs/heads/main/diabetes.csv"
     output_path=yaml.safe_load(open("params.yaml"))["directories"]["data_path"]
     create_directories(output_path)
     load_data(input_path,output_path)
 
 
-
-
-
-
-#https://raw.githubusercontent.com/VigneshwarKandhaiya1207/datasets/refs/heads/main/gemstone.csv
