@@ -44,6 +44,7 @@ def train(data_path,model_path):
     with mlflow.start_run():
         X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=42,test_size=0.2)
         signature=infer_signature(X_train,y_train)
+
         param_grid = {
             'n_estimators': [100, 200],
             'max_depth': [5, 10, None],
