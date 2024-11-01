@@ -1,0 +1,20 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - src/preprocess.py
+    outs:
+    - data/data.csv
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/data.csv
+    - src/train.py
+    outs:
+    - model/random_forest.pkl
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - model/random_forest.pkl
+    - src/evaluate.py
+  
